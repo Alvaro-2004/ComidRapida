@@ -24,4 +24,7 @@ public class Controlador {
     public ArrayList getArray(){
         return adm.getArray();
     }
+    public void eliminar(Pedidos obj){
+        adm.eliminar(obj);
+    }
 }

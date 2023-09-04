@@ -6,6 +6,7 @@ package models;
 
 import controller.Controlador;
 import views.FrmAtencion;
+import views.FrmPantalla;
 import views.FrmPedido;
 
 
@@ -22,6 +23,10 @@ public class NewMain {
         FrmAtencion frm2 = new FrmAtencion();
         frm2.setControl(control);
         frm2.setVisible(true);
+        
+        FrmPantalla frm3 = new FrmPantalla();
+        frm3.setControl(control);
+        frm3.setVisible(true);
     }
     
 }

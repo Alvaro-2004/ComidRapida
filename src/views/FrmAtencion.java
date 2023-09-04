@@ -45,6 +45,11 @@ public class FrmAtencion extends javax.swing.JFrame {
 
         btnEntregar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnEntregar.setText("ENTREGAR");
+        btnEntregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntregarActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Descripción");
@@ -114,8 +119,13 @@ public class FrmAtencion extends javax.swing.JFrame {
             model.addElement(String.valueOf(pedido.getNumero())+"-"+pedido.getDescripcion());
         }
         list.setModel(model);
-        
+        Pedidos pedido = control.buscar();
+        pantalla.setNum(pedido.getNumero(),pedido.getDescripcion());
     }//GEN-LAST:event_btnEntregar1ActionPerformed
+
+    private void btnEntregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntregarActionPerformed
+        control.eliminar(control.buscar());
+    }//GEN-LAST:event_btnEntregarActionPerformed
 
     /**
      * @param args the command line arguments

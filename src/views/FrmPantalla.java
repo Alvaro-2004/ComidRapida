@@ -15,9 +15,12 @@ public class FrmPantalla extends javax.swing.JFrame {
     private Controlador control;
     public FrmPantalla() {
         initComponents();
+        
     }
-    public void setNum(int num){
+    public void setNum(int num, String desc){
         String numero = Integer.toString(num);
+        txtNum.setText(numero);
+        txtDescripcion.setText(desc);
     }
     public void setControl(Controlador control) {
         this.control = control;
