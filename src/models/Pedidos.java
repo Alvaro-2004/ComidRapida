@@ -2,14 +2,14 @@
 package models;
 
 public class Pedidos {
-    public static int num;
+    public static int num = 0;
     private int numero;
     private String descripcion;
 
     public Pedidos(String descripcion) {
-        num++;
         this.descripcion = descripcion;
         this.numero=num;
+        num++;
     }
 
     public int getNumero() {

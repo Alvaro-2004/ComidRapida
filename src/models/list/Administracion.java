@@ -36,4 +36,11 @@ public class Administracion implements List<Pedidos>{
         }
         return null;
     }
+    
+    public Pedidos siguiente() {
+        for (Pedidos pedido : array){
+               return pedido;
+           }
+        return null;
+    }
 }
