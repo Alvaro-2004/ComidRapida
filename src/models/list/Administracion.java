@@ -43,4 +43,7 @@ public class Administracion implements List<Pedidos>{
            }
         return null;
     }
+    public ArrayList getArray(){
+        return this.array;
+    }
 }
